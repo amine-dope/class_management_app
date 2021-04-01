@@ -120,8 +120,14 @@ h1{
 }
 
 button {
-    margin: 42% 88%;
+    /* margin: 42% 88%; */
     background-color: #8dafdb;
     border-radius: 69%;
     padding: 3%;
+    margin-top: 10px;
+}
+
+summary{
+
+    margin-top: 30%;
 }
