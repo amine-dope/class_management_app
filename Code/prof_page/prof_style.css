@@ -73,25 +73,51 @@ img {
     color: black;
 }
 
-.cards{
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.card{
+    width: 19%;
+    
+    
+    border: 1px grey solid;
+    border-radius: 9px;
+    height: fit-content;
+    padding-bottom: 4px;
+    
+
+}
+.card img{
+    width: 100%;
+}
+.card .image{
+    height: 55%;
+    overflow: hidden;
+}
+.card p{
+    margin: 13px 3px 16px 3px;
+}
+.card h3{
+    text-align: center;
+}
+.links{
     display: flex;
-    justify-content: space-between;
-    margin-top: 60px;
-    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3px;
+    
 }
 
-.card {
-    width: 389px;
-    height: 318px;
-    border: #A2A2A2 2px solid;
-    padding: 29px;
-    background-color: #ffffff;
-    margin-top: 6%;
-    border-radius:7% ;
-}
-
-section {
-    padding: 3%;
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-width: 300px;
+    margin-top: 66px;
 }
 
 .url{
@@ -127,9 +153,41 @@ button {
     padding: 3%;
 }
 
-input{
-    margin-left: 27%;
-}
 summary{
     width: 72%;
+}
+
+
+.add-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin: 48px;
+}
+
+.btn{
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    padding: .6rem 1.2rem;
+}
+
+.btn-add{
+    color: white;
+    background: rgb(23, 23, 253);
+}
+
+.form{
+    margin: 40px  auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    align-items: stretch;
+}
+
+
+.form label{
+    margin-top: 10px;
 }
