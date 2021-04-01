@@ -5,9 +5,21 @@
 
 body{
     background-color: #EAEAEA;
-    /* font-family: 'Ubuntu', sans-serif; */
+    
 }
-
+th {
+    border: 10px solid #121ec2;
+    text-align: left;
+    padding: 17px;
+}
+table {
+    margin: 6% 2%;
+    padding: -1%;
+    width: 96%;
+}
+td{
+    border: 3px solid #121ec2;
+}
 header{
     background-color: #8dafdb;
     border-color: black;
@@ -125,14 +137,14 @@ button {
     border-radius: 69%;
     padding: 3%;
     margin-top: 10px;
+    margin-left: 20px;
 }
 
 summary{
 
     margin-top: 30%;
 }
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
+
+input{
+    margin-left: 5px;
+}

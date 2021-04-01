@@ -21,10 +21,6 @@
     <header class="container">
         <div class="logo"><h1 class="you">You</h1>
         <h1 class="code">Code</h1></div>
-        <ol class="navitems">
-            <li><a href="#">Briefs</a></li>
-            <li><a href="#">works</a></li>
-        </ol>
         
             <ul class="navitems2">
                 <li  class=profil>
@@ -39,7 +35,7 @@
        
     </header>
 
-<body>
+
     <table>
         <thead>
             <th>title</th>
