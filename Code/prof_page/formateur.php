@@ -74,7 +74,7 @@ if($countProject == 0)
          <p>'.$row["descreption"].'</p>
          <hr>
          <div class="links">
-             <div class="link1"><a href="project.php?action=show&id='.$row["id_projet"].'">card link</a></div>
+             <div class="link1"><a href="project.php?action=show&id='.$row["id_projet"].'">show</a></div>
              <div class="link2"><a href="project.php?action=delete&id='.$row["id_projet"].'">cancel</a></div>
          </div>
      </div>
