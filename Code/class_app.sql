@@ -33,9 +33,9 @@ CREATE TABLE IF NOT EXISTS `etudiant` (
   `id_etudiant` int(12) NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
   `prenom` varchar(20) NOT NULL,
-  `user_name` varchar(20) NOT NULL,
+  `username` varchar(20) NOT NULL,
   `nemuro class` int(12) NOT NULL,
-  `password` varchar(30) NOT NULL,
+  `motdepasse` varchar(30) NOT NULL,
   PRIMARY KEY (`id_etudiant`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `etudiant` (
 -- Déchargement des données de la table `etudiant`
 --
 
-INSERT INTO `etudiant` (`id_etudiant`, `nom`, `prenom`, `user_name`, `nemuro class`, `password`) VALUES
+INSERT INTO `etudiant` (`id_etudiant`, `nom`, `prenom`, `username`, `nemuro class`, `motdepasse`) VALUES
 (1, 'saila', 'amine', 'amine1', 3, 'amine1'),
 (2, 'herbach', 'khadija', 'khadija2', 3, 'khadija2');
 
