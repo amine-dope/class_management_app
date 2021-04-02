@@ -12,10 +12,10 @@ if (isset($_POST["login"])) {
 
     $user = $_POST['username'];
     $mdp = $_POST['password'];
-    $req2 = ("SELECT * FROM formateur WHERE username = '$user' and motdepasse = '$mdp'");
+    $req2 = ("SELECT * FROM formateur WHERE user_name = '$user' and password = '$mdp'");
     $pro2 = mysqli_query($link, $req2);
     $row2 = mysqli_num_rows($pro2);
-    $req = ("SELECT * FROM etudiant WHERE username = '$user' and motdepasse = '$mdp' ");
+    $req = ("SELECT * FROM etudiant WHERE user_name = '$user' and password = '$mdp' ");
     $pro = mysqli_query($link, $req);
     $row = mysqli_num_rows($pro);
 
