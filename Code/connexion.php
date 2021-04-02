@@ -23,9 +23,9 @@ if (isset($_POST["login"])) {
     if ($row == 0 && $row2 == 0) {
         echo "Quelque chose est incorrect!";
     } elseif ($row == 1) {
-        echo "Etudiant";
+        header('location:student_index.html');
     } elseif ($row2 == 1) {
-        echo "Formateur";
+        header('location:prof_index.html');
     }
     // else {
     //     $_SESSION['username'] = $row['username'];
