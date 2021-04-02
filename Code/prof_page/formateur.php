@@ -48,27 +48,38 @@ $formateur = mysqli_fetch_assoc($results);
        
     </header>
 
+    <div class="add-btn"><a href="addProject.php" class="btn btn-add">Add Project</a></div>
+
 <?php
-include_once ("../connexion_db.php");
-$sql = "SELECT * FROM `projects` WHERE 1";
+
+$sql = "SELECT * FROM `projects`";
 $resultProject = mysqli_query($link, $sql);
 $countProject = mysqli_num_rows($resultProject);
 
 
 if($countProject == 0)
 {
-    echo '<h1>Thers is nothing to show.</h1>';
+    echo '<h1 style="text-align:center;">Thers is nothing to show.</h1>';
 }else{
     while ($row = mysqli_fetch_assoc($resultProject)) {
-        echo' <section class="container2">
-           <main class="cards">
-               <div class="card">
-                   <h1 class="project">'.$row["titre_projet"].' </h1>
-                   
-                   <button type="submit"  name ="submit" href="#">Delet project</button> 
-               </div>
-       </main> 
-       </section>';
+
+     
+    echo' <div class="container">
+     <div class="card">
+         <div class="image">
+             <img src="code-editoren-t.jpg" alt="">
+         </div>
+         <h3>'.$row["titre_projet"].'</h3>
+         <hr>
+         <p>'.$row["descreption"].'</p>
+         <hr>
+         <div class="links">
+             <div class="link1"><a href="project.php?action=show&id='.$row["id_projet"].'">show</a></div>
+             <div class="link2"><a href="project.php?action=delete&id='.$row["id_projet"].'">cancel</a></div>
+         </div>
+     </div>
+     
+ </div>';
    }
 }
 
@@ -76,6 +87,6 @@ if($countProject == 0)
    
            
                 
-    
+
 </body>
 </html>
