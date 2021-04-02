@@ -3,7 +3,8 @@
     $sql = "SELECT * FROM projects";
     $resultat = mysqli_query($link,$sql);
 
-    $sqli = "INSERT INTO `validation` "
+    // $sqli = "INSERT INTO `validation`";
+    // $sqli .= "VALUE";
 
     
 ?>
@@ -40,8 +41,9 @@
         <thead>
             <th>title</th>
             <th>nature</th>
-            <th>URL brief</th>
+            <th><a>URL brief</a></th>
             <th>rendu</th>
+            <th>valide</th>
         </thead>
 
         <tbody>
@@ -53,7 +55,12 @@
                         <td><?= $row['titre_projet'];?></td>
                         <td><?= $row['nateur de projet'];?></td>
                         <td><?= $row['urlt'];?></td>
-                        <td><input type="text" name="rendu"><button name="push" type="submit">push</button> </td>
+                        <td>
+                            <form action="traitement.php" method="POST">
+                                <input type="text" name="rendu">
+                                <button name="push" type="submit">push</button>
+                            </form>
+                         </td>
                     </tr>
                 <?php endforeach ?>
                 
