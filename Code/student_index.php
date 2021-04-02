@@ -3,8 +3,6 @@
     $sql = "SELECT * FROM projects";
     $resultat = mysqli_query($link,$sql);
 
-    // $sqli = "INSERT INTO `validation`";
-    // $sqli .= "VALUE";
 
     
 ?>
@@ -56,9 +54,30 @@
                         <td><?= $row['nateur de projet'];?></td>
                         <td><?= $row['urlt'];?></td>
                         <td>
-                            <form action="traitement.php" method="POST">
+                            <form  method="POST">
                                 <input type="text" name="rendu">
                                 <button name="push" type="submit">push</button>
+                                <?php
+
+                        include_once('database.php');
+
+
+
+                            if (isset($_POST['push'])) {
+   
+
+
+                                if (empty($_POST['rendu'])) {
+                                    echo "Please enter your project URL";
+                                }   
+
+                                else if (!empty($_POST['rendu'])) {
+                                    $insert = ("INSERT INTO `validation`( `url`) VALUES ('" . $_POST['rendu'] . "')");
+                                    $query =  mysqli_query($link,$insert);
+                                    header('location:student_index.php');
+                                }
+                                }
+?>
                             </form>
                          </td>
                     </tr>
